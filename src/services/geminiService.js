@@ -1,0 +1,1 @@
+// Keyinchalik bu yerda Gemini API bilan ishlash uchun xizmatlar qo'shiladi
