@@ -1,0 +1,212 @@
+/* Oddiy, toza CSS dizayn */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Arial, sans-serif;
+}
+
+/* Layout */
+.app {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(2, 6, 23, 0.12);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    padding: 18px 22px;
+    border-bottom: 1px solid #eef2f7;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.header .sub {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Controls */
+.controls {
+    padding: 16px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.controls .row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    font-size: 13px;
+    color: #334155;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.controls select,
+.controls input[type="range"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e6eef6;
+    background: #fff;
+}
+
+.controls input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+/* sliders row */
+.controls .sliders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.controls .val {
+    font-weight: 600;
+    margin-left: 6px;
+    color: #0f172a;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.btn.primary {
+    background: #0ea5a4;
+    color: white;
+}
+
+/* Chatbox */
+.chatbox {
+    height: 380px;
+    padding: 18px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #fbfdff, #f8fafc);
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.empty {
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Message bubbles */
+.bubble {
+    display: flex;
+    margin: 8px 0;
+    max-width: 75%;
+}
+
+.bubble.me {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.bubble.other {
+    margin-right: auto;
+    justify-content: flex-start;
+}
+
+.bubble-text {
+    padding: 10px 14px;
+    border-radius: 14px;
+    line-height: 1.3;
+}
+
+.bubble.me .bubble-text {
+    background: #06b6d4;
+    color: #042024;
+    border-bottom-right-radius: 4px;
+}
+
+.bubble.other .bubble-text {
+    background: #e6edf3;
+    color: #0f172a;
+    border-bottom-left-radius: 4px;
+}
+
+/* Input */
+.input-row {
+    display: flex;
+    gap: 12px;
+    padding: 14px 18px;
+    align-items: flex-end;
+}
+
+.input-row textarea {
+    flex: 1;
+    min-height: 64px;
+    max-height: 160px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e6eef6;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 720px) {
+    .controls .sliders {
+        grid-template-columns: 1fr;
+    }
+
+    .input-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
+    .chatbox {
+        height: 300px;
+    }
+}
