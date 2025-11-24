@@ -1,9 +1,11 @@
-import React from 'react'
-
-function ChatPage() {
+export default function ChatPage() {
   return (
-    <div>ChatPage</div>
-  )
-}
+    <div className="page">
+      <h2>Gemini AI Chat</h2>
 
-export default ChatPage
+      <div className="chat-box">
+        <p>Bu yerga keyin Gemini AI ulaymiz.</p>
+      </div>
+    </div>
+  );
+}
